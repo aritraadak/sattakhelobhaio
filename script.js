@@ -49,7 +49,7 @@ function playRound(playerChoice) {
     if (Math.random() < 0.0) {
         computerChoice = (playerChoice + 1) % 3;
     } else {
-        computerChoice = Math.floor(Math.random() * 3);
+        computerChoice =( (Math.floor(Math.random()*100)) %3);
     }
 
     let resultText = `You chose: ${choices[playerChoice]} | Computer chose: ${choices[computerChoice]}<br>`;
@@ -91,4 +91,5 @@ function playRound(playerChoice) {
     }
 
 }
+
 
