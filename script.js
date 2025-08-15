@@ -46,7 +46,7 @@ function playRound(playerChoice) {
 
     let computerChoice;
     // 90% chance computer wins
-    if (Math.random() < 0.5) {
+    if (Math.random() < 0.2) {
         computerChoice = (playerChoice + 1) % 3;
     } else {
         computerChoice = Math.floor(Math.random() * 3);
@@ -89,4 +89,5 @@ function playRound(playerChoice) {
         }
         document.getElementById("finalResult").innerHTML = finalMsg;
     }
+
 }
