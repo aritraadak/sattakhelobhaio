@@ -1,0 +1,187 @@
+/* Animated deep purple background */
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    background: linear-gradient(-45deg, #1a0033, #3d0066, #5e00a3, #2b003f);
+    background-size: 400% 400%;
+    animation: bgAnimation 15s ease infinite;
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Neon glowing text */
+
+.neon-text {
+    font-size: 31px;
+    /*2em;*/
+    color: #ffffff;
+    text-shadow: 0 0 5px #8b26c5, 0 0 15px #5b0f7b, 0 0 30px #8000ff;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.85;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Game container */
+
+.game-container {
+    max-width: 550px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 25px rgba(179, 0, 255, 0.7);
+    animation: bounceIn 1s ease, pulseBox 2s infinite alternate;
+}
+
+@keyframes pulseBox {
+    0% {
+        box-shadow: 0 0 15px rgba(179, 0, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(179, 0, 255, 0.9);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(100px) scale(0.9);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-20px) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Start screen */
+
+.start-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #b300ffb3;
+    animation: bounceIn 1s ease;
+}
+
+.start-container input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    box-shadow: 0 0 10px #b300ffb3;
+    outline: none;
+    background: #1a0033;
+    color: #f6def6;
+    margin-top: 10px;
+}
+
+
+/* Scoreboard */
+
+.scoreboard {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.neon-box {
+    border: 2px solid #d17fff;
+    box-shadow: 0 0 15px #b300ff;
+}
+
+
+/* Bet input */
+
+.bet-section input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    box-shadow: 0 0 10px #b300ff;
+    outline: none;
+    background: #1a0033;
+    color: #faf9fa;
+}
+
+
+/* Choice buttons */
+
+.choice-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #1a0033;
+    color: #fff;
+    box-shadow: 0 0 10px #b300ff, 0 0 20px #8000ff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #b300ff, 0 0 40px #8000f9ff;
+}
+
+
+/* Results */
+
+.result-text {
+    font-size: 17px;
+    margin-top: 15px;
+    animation: fadeIn 0.5s ease;
+}
+
+.final-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #d281fe;
+    text-shadow: 0 0 10px #b300ff, 0 0 20px #c676e8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

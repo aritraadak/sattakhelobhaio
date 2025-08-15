@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Start Screen -->
+    <div class="start-container" id="startScreen">
+        <h1 class="neon-text">💰Gambling Rock Paper Scissors💰</h1>
+        <input type="number" id="startingMoney" placeholder="Enter Starting Money" min="1">
+        <br>
+        <button class="choice-btn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="game-container" id="gameScreen" style="display:none;">
+        <h1 class="neon-text">💰Gambling Rock Paper Scissors💰</h1>
+
+        <div class="scoreboard neon-box">
+            <p>Round: <span id="round">1</span> / 3</p>
+            <p>Your Money: ₹<span id="money">0</span></p>
+            <p>Your Score: <span id="playerScore">0</span> | Computer Score: <span id="computerScore">0</span></p>
+        </div>
+
+        <div class="bet-section">
+            <input type="number" id="betAmount" placeholder="Enter bet amount" min="1">
+        </div>
+
+        <div class="choices">
+            <button class="choice-btn" onclick="playRound(0)">🪨 Rock</button>
+            <button class="choice-btn" onclick="playRound(1)">📄 Paper</button>
+            <button class="choice-btn" onclick="playRound(2)">✂️ Scissors</button>
+        </div>
+
+        <div id="result" class="result-text"></div>
+        <div id="finalResult" class="final-text"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
